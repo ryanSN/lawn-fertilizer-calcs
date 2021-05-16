@@ -1,8 +1,13 @@
 import { lbsOfNitrogenInBagPerSqFt, howMuchAtRatePerThousandSqFeet } from '../index';
 
 describe('Lbs of Nitrogen', () => {
-  test('lbs of Nitrogen in Bag', () => {
-    expect(lbsOfNitrogenInBagPerSqFt(26, 19, 5000)).toBe(0.98);
+  describe('lbs of Nitrogen in the bag', () => {
+    test('lbs of Nitrogen in Bag 26-0-0, 19lb bag @ 5000 sqt', () => {
+      expect(lbsOfNitrogenInBagPerSqFt(26, 19, 5000)).toBe(0.98);
+    });
+    test('lbs of Nitrogen in Bag 22-0-8, 35lb bag @ 10000 sqt', () => {
+      expect(lbsOfNitrogenInBagPerSqFt(22, 35, 10000)).toBe(0.77);
+    });
   });
 
   describe('howMuchAtRatePerThousandSqFeet', () => {
